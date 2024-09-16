@@ -32,3 +32,26 @@ This is a simple URL Shortener service that allows users to shorten long URLs in
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/url-shortener.git
+## Usage
+1. Navigate to the home page.
+2. Enter the long URL you want to shorten.
+3. Click "Shorten URL" to get your shortened link.
+4. Use the shortened link to redirect to the original URL.
+
+### Example:
+- Original URL: `https://www.example.com/very/long/url`
+- Shortened URL: `http://localhost:3000/abcd12`
+
+## API Endpoints
+
+### POST `/api/url/shorten`
+- **Description**: Create a shortened URL.
+- **Request**:
+  - **Body**: `{ "longUrl": "https://www.example.com" }`
+- **Response**:
+  ```json
+  {
+    "shortUrl": "http://localhost:3000/abcd12",
+    "longUrl": "https://www.example.com"
+  }
+
